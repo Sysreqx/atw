@@ -46,9 +46,9 @@ if (function_exists('add_theme_support'))
 	'width'				=> 1000,
 	'height'			=> 198,
 	'random-default'		=> false,
-	'wp-head-callback'		=> $wphead_cb,
-	'admin-head-callback'		=> $adminhead_cb,
-	'admin-preview-callback'	=> $adminpreview_cb
+	'wp-head-callback'		=> ''/*$wphead_cb*/,
+	'admin-head-callback'		=> ''/*$adminhead_cb*/,
+	'admin-preview-callback'	=> ''/*$adminpreview_cb*/
     ));
 
     // Enables post and comment RSS feed links to head
