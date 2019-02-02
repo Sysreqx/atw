@@ -30,8 +30,8 @@ html {
 	font-size:62.5%;
 }
 body {
-	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#444;
+	font:300 16px/1.6 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#000;
 }
 /* clear */
 .clear:before,
@@ -83,8 +83,11 @@ STRUCTURE
 }
 /* header */
 .header {
-	background-color: rgba(0,0,0, .7);
 	text-align: center;
+}
+
+.header .navcanvas {
+	background-color: rgba(0,0,0, .7);
 }
 
 .logo-img {
@@ -120,6 +123,30 @@ STRUCTURE
 	background-color: #df7900;
 }
 
+/* featured image */
+.featuredImg {
+	height: 375px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+/* About Us Page */
+.about-us-images {
+	display: flex;
+	flex-flow: column;
+}
+
+.photo {
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display: inline-block;
+	padding: 10px;
+}
+
+
+
 /* sidebar */
 .sidebar {
 
@@ -141,6 +168,12 @@ RESPONSIVE
 }
 @media only screen and (min-width:768px) {
 	/* Header */
+	.header .navcanvas {
+		position: absolute;
+		width: 100%;
+		margin-top: 20px;
+	}
+
 	.header .wrapper {
 		justify-content: space-between;
 	}
