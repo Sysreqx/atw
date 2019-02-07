@@ -33,6 +33,13 @@ body {
 	font:300 16px/1.6 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color:#000;
 }
+h2 {
+	color: #df7900;
+	text-align: center;
+	background-image: url(img/h2-bg.png);
+	background-repeat: repeat-x;
+	background-position: center center;
+}
 /* clear */
 .clear:before,
 .clear:after {
@@ -135,16 +142,34 @@ STRUCTURE
 /* About Us Page */
 .about-us-images {
 	display: flex;
-	flex-flow: column;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	justify-content: center;
+}
+
+main h2 span {
+	background-color: #fff;
+	padding: 0 36px 0 36px;
 }
 
 .photo {
 	background-color: white;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.2), -4px -4px 20px 0 rgba(0, 0, 0, 0.2);
 	display: inline-block;
 	padding: 10px;
+	width: 321px;
 }
 
+.photo:nth-child(2n + 1) {
+	transform: rotate(-10deg);
+}
+
+.photo:nth-child(2n + 2) {
+	transform: rotate(10deg);
+}
 
 
 /* sidebar */
@@ -187,6 +212,23 @@ RESPONSIVE
 		width: 100%;
 	}
 }
+
+@media only screen and (min-width:922px) {
+	div#main-content {
+		display: flex;
+		align-items: center;
+	}
+
+	#main-content article {
+		flex-basis: 70%;
+		padding-right: 30px;
+	}
+
+	.about-us-images {
+		flex-basis: 27%;
+	}
+}
+
 @media only screen and (min-width:1024px) {
 	/* Header */
 	.header .wrapper {
