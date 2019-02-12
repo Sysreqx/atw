@@ -11,33 +11,50 @@
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php the_content(); ?>
+				<?php 
+				$args = array(
+					'post_type'				=> 'atw_tours',
+					'posts_per_page'	=> -1,
+					'order_by'				=> 'title',
+					'order'						=> 'ASC',
+				);
+				$query = new WP_Query( $args ); ?>
 
-				<br class="clear">
+				<?php if ( $query->have_posts() ) : ?>
 
-				<?php edit_post_link(); ?>
+					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+						<h3><?php the_title(); ?></h3>
+					<?php endwhile; ?>
 
-			</article>
-			<!-- /article -->
+					<?php wp_reset_postdata(); ?>
 
-		<?php endwhile; ?>
+					<?php else : ?>
+						<p><?php esc_html_e( 'Нет постов по вашим критериям.' ); ?></p>
+					<?php endif; ?>
 
-		<?php else: ?>
+					<?php edit_post_link(); ?>
 
-			<!-- article -->
-			<article>
+				</article>
+				<!-- /article -->
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'atw' ); ?></h2>
+			<?php endwhile; ?>
 
-			</article>
-			<!-- /article -->
+			<?php else: ?>
 
-		<?php endif; ?>
+				<!-- article -->
+				<article>
 
-	</section>
-	<!-- /section -->
-</main>
+					<h2><?php _e( 'Sorry, nothing to display.', 'atw' ); ?></h2>
 
-<?php get_sidebar(); ?>
+				</article>
+				<!-- /article -->
 
-<?php get_footer(); ?>
+			<?php endif; ?>
+
+		</section>
+		<!-- /section -->
+	</main>
+
+	<?php get_sidebar(); ?>
+
+	<?php get_footer(); ?>
