@@ -102,7 +102,7 @@ STRUCTURE
 }
 
 /* nav */
-.nav ul {
+ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
@@ -171,6 +171,84 @@ main h2 span {
 	transform: rotate(10deg);
 }
 
+/* Page Tours */
+.featured-tour {
+	position: relative;
+}
+
+.featured-tour .more-info {
+	position: absolute;
+	top: 15px;
+	right: 0;
+}
+
+.featured-tour > img:first-child {
+	padding: 0 20px 0 0;
+}
+
+.tours h3 a {
+	color: #df7900;
+	font-size: 2.4rem;
+	font-size: 24px;
+	line-height: 33px;
+	margin-bottom: 3px;
+}
+
+ul.tours {
+	color: #4c4c4c;
+	font-size: 1.4rem;
+	font-size: 14px;
+	margin-top: 50px;
+}
+
+p.date {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.tour-description p {}
+
+.date-price p {
+	margin: 0;
+}
+
+p.price {
+	color: #df7900;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 700;
+	padding-right: 20px;
+}
+
+p.price:before {
+	content: "$ ";
+}
+
+p.price:after {
+	content: " USD";
+}
+
+.date-price {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.tour-description ul li:before {
+	position: relative;
+	content: "-";
+	left: -5px;
+}
+
+.tour-description ul li {
+	margin: 5px;
+}
+
+.tours > li {
+	margin-bottom: 40px;
+}
+
+/* .Page Tours */
 
 /* sidebar */
 .sidebar {
@@ -226,6 +304,17 @@ RESPONSIVE
 
 	.about-us-images {
 		flex-basis: 27%;
+	}
+
+	/* Page Tours */
+	ul.tours {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+
+	.tours > li {
+		flex-basis: 49%;
 	}
 }
 
