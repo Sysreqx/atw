@@ -40,6 +40,7 @@ h2 {
 	background-repeat: repeat-x;
 	background-position: center center;
 }
+
 /* clear */
 .clear:before,
 .clear:after {
@@ -58,6 +59,7 @@ img {
 	vertical-align:bottom;
 	object-fit: cover;
 }
+
 a {
 	color:#444;
 	text-decoration:none;
@@ -75,6 +77,13 @@ a:active {
 input:focus {
 	outline:0;
 	border:1px solid #04A4CC;
+}
+
+h2 a {
+	color: #df7900;
+}
+h2 a:hover {
+	color:#df7900;
 }
 
 /*------------------------------------*\
@@ -249,6 +258,45 @@ p.price:after {
 }
 
 /* .Page Tours */
+
+/* Single Tour */
+.single-tour-detail {
+    margin-top: 28px;
+    background-color: #e3e3e3;
+    padding: 23px;
+}
+
+.single-tour-detail p {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    line-height: 33px;
+    color: #494949;
+}
+
+.single-tour-detail p strong {
+    margin-right: 5px;
+}
+
+.itinerary h2 {
+    text-align: left;
+    background: none;
+    margin: 0;
+}
+
+.itinerary > h2:first-child {
+    font-size: 30px;
+    font-size: 3rem;
+    margin: 28px 0 40px;
+    text-align: center;
+}
+
+.itinerary p {
+    font-size: 12px;
+    margin: 0 auto 30px;
+}
+/* .Single Tour */
+
 
 /* sidebar */
 .sidebar {
