@@ -1,11 +1,5 @@
-(function ($, root, undefined) {
-	
-	$(function () {
-		
-		'use strict';
-		
-		// DOM ready, take it away
-		
-	});
-	
-})(jQuery, this);
+$ = jQuery.noConflict();
+
+$( document ).ready(function() {
+	$('.gallery a').attr('data-lightbox', 'galleryss');
+});

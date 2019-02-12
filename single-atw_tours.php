@@ -42,12 +42,15 @@
 					</div>
 					<!-- /post details -->
 
-					<?php the_content(); // Dynamic Content ?>
-
-					<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
 				</article>
 				<!-- /article -->
+
+				<aside class="tour-gallery">
+					<h2>Gallery</h2>
+					<?php the_content(); ?>
+				</aside>
+
+				<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
 			<?php endwhile; ?>
 
